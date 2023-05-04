@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <style>
+       .card{
+            margin-left: 20%;
+            margin-top: 5%;
+       }
+    </style>
+</head>
+<body>
+    
+
+     <!-- header -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'base' %}" style="font-family:Arial">HWeddings</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'base' %}">Venues</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'events' %}">Events</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+      <div class="cards">
+        <div class="card" style="width: 60%">
+            <img src="{%static 'wedding2/images/2.jpg'%}" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">Chida Event Centre</h3>
+              <p><b>Address:</b> 226 P.O.W. Mafemi Cres, Utako 900108, Abuja, Federal Capital Territory </p>
+              <p><b>Phone Number:</b> 0810 071 8883 </p>
+              <p><b>E-mail:</b> chida@gmail.com </p>
+              <!-- <a href="chida.html" class="btn btn-primary">Book Now</a> -->
+            </div>
+          </div>
+
+    <!-- footer -->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top-success">
+      <p class="col-md-4 mb-0 text-muted">© HWeddings</p>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="{% url 'base' %}" class="nav-link px-2 text-muted">Venues</a></li>
+        <li class="nav-item"><a href="{% url 'events' %}" class="nav-link px-2 text-muted">Events</a></li>
+      </ul>
+    </footer>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    </body>
+</html>
